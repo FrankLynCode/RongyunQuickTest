@@ -37,19 +37,22 @@
                 android:id="@+id/bt4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="开启聚合会话列表" />
+                android:text="开启聚合会话列表"/>
+                <!--android:visibility="invisible"/>-->
 
             <Button
                 android:id="@+id/bt5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="创建讨论组" />
+                android:text="创建讨论组"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/bt6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="加入群组" />
+                android:text="加入群组"
+                android:visibility="invisible" />
         </LinearLayout>
 
     </ScrollView>

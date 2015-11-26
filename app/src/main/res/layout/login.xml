@@ -12,8 +12,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="简单集成demo，用户账号用的是一个" />
+        android:layout_marginLeft="20dp"/>
+        <!--android:text="简单集成demo，用户账号用的是一个" />-->
 
 
     <EditText
@@ -22,15 +22,16 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:text="yang115@qq.com" />
+        android:text="357015691@qq.com" />
 
     <EditText
         android:id="@+id/et2"
         android:layout_width="320dp"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:password="true"
         android:layout_height="wrap_content"
-        android:text="123456" />
+        android:text="cclm999" />
 
     <Button
         android:id="@+id/bt1"

@@ -52,7 +52,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.bt2:
                 if (RongIM.getInstance() != null)
-                    RongIM.getInstance().startPrivateChat(MainActivity.this, "26594", "title");
+                    RongIM.getInstance().startPrivateChat(MainActivity.this, "74358", "title");
                 break;
             case R.id.bt3:
                 if (RongIM.getInstance() != null)

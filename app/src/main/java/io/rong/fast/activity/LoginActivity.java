@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +36,7 @@ public class LoginActivity extends Activity {
      * 您必须通过 Server API 从融云服务器 获取 token 返回给您的 App，并在之后连接时使用
      */
     private String token;
+    private EditText usename,password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,8 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.login);
 
         Button btn = (Button) findViewById(R.id.bt1);
+        usename = (EditText)findViewById(R.id.et1);
+        password = (EditText)findViewById(R.id.et2);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +61,8 @@ public class LoginActivity extends Activity {
      */
     private void login() {
 
+        final String usename = this.usename.getText().toString();
+        final String psw = this.password.getText().toString();
         new AsyncTask<Void, Void, String>() {
 
             @Override
@@ -64,8 +70,8 @@ public class LoginActivity extends Activity {
 
                 Map<String, String> requestParameter = new HashMap<String, String>();
 
-                requestParameter.put("email", "yang115@qq.com");
-                requestParameter.put("password", "123456");
+                requestParameter.put("email", usename);
+                requestParameter.put("password", psw);
 
                 String result = NetUtils.sendPostRequest("email_login", requestParameter);
                 return result;
